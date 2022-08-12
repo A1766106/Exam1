@@ -3,20 +3,11 @@
 
 using namespace std;
 
-extern int bin_to_int(int binary_digits[], int number_of_digits);
+extern void print_matrix(int array[10][10]);
 
 int main()
 {
-    int number_of_digits;
-    cout << "Please enter the number of digits: ";
-    cin >> number_of_digits;
-    int binary_digits[number_of_digits];
-    for(int i=0; i<number_of_digits; i++)
-    {
-        cout << "Please enter a digit " << endl;
-        cin >> binary_digits[i];
-    }
-    cout << "Your int is " << bin_to_int(binary_digits, number_of_digits) << endl;
-
-
+    int array[10][10] = {{1,1,1,1,1,1,1,1,1,1}, {2,2,2,2,2,2,2,2,2,2},{1,1,1,1,1,1,1,1,1,1}, {2,2,2,2,2,2,2,2,2,2},{1,1,1,1,1,1,1,1,1,1}, {2,2,2,2,2,2,2,2,2,2},{1,1,1,1,1,1,1,1,1,1}, {2,2,2,2,2,2,2,2,2,2},{1,1,1,1,1,1,1,1,1,1}, {2,2,2,2,2,2,2,2,2,2}};
+    print_matrix(array);
+    return 0;
 }

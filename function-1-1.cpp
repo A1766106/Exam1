@@ -3,18 +3,20 @@
 
 using namespace std;
 
-int bin_to_int(int binary_digits[], int number_of_digits)
+void print_matrix(int array[10][10])
 {
-    int multiplier = 1;
-    int num = 0;
-    int endPTR = number_of_digits -1;
-
-    while(endPTR>=0)
+    for(int i=0; i<10; i++)
     {
-        num += binary_digits[endPTR] * multiplier;
-        multiplier = multiplier *2;
-        endPTR = endPTR -1;
+        for(int j=0; j<10; j++)
+        {
+            if(j!=9)
+            {
+                cout << array[i][j] << " ";
+            }
+            else
+            {
+                cout << array[i][9] << endl;
+            }
+        }
     }
-
-    return num;
 }
